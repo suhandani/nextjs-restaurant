@@ -73,7 +73,12 @@ export default function Kasir() {
       <div className="m-2">Meja</div>
       <div className="flex flex-row">
         <div className="m-4 w-2/4">
-          <select id="pilihMeja" className="m-4 w-full" onChange={changeTable}>
+          <select
+            id="pilihMeja"
+            className="m-4 w-full"
+            onChange={changeTable}
+            value={table == 0 ? "0" : table.toString()}
+          >
             <option value={0}>Pilih Meja</option>
             {list.map((list, index: number) => {
               return (

@@ -6,10 +6,15 @@ import { useEffect, useState } from "react";
 type Menu = { id: string; name: string };
 
 export default function Menu() {
-  const [menus, setMenus] = useState<Menu[]>([]);
+  const [menus, setMenus] = useState<Menu[]>([
+    { id: "996756", name: "Ayam Kecap Manis" },
+    { id: "362342", name: "Nasi Goreng Spesial" },
+  ]);
   const [nama, setNama] = useState("");
+
   useEffect(() => {
     if (localStorage) {
+      localStorage.setItem("menus", JSON.stringify(menus));
       setMenus(JSON.parse(localStorage.getItem("menus") || "[]"));
     }
   }, []);

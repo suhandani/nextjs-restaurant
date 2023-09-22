@@ -12,13 +12,6 @@ export default function RootLayout({
 }) {
   const router = usePathname();
 
-  useEffect(() => {
-    localStorage.setItem(
-      "menus",
-      '[{"id":"996756","name":"Ayam Kecap Manis"},{"id":"362342","name":"Nasi Goreng Spesial"}]'
-    );
-  }, []);
-
   const reset = () => {
     localStorage.setItem(
       "menus",
