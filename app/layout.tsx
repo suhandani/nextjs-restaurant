@@ -1,18 +1,9 @@
 "use client";
 
 import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { usePathname } from "next/navigation";
 import ButtonMenu from "@/components/ButtonMenu";
 import { useEffect, useState } from "react";
-
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Nextjs Restaurant",
-  description: "Learn to build Nextjs applications",
-};
 
 export default function RootLayout({
   children,
@@ -39,7 +30,11 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <head>
+        <title>Nextjs Restaurant</title>
+        <meta name="Learn to build Nextjs applications" />
+      </head>
+      <body>
         <div className="flex flex-col p-6 space-y-5 w-[650px]">
           <div className="flex flex-row">
             <div className="flex flex-col mr-12">
